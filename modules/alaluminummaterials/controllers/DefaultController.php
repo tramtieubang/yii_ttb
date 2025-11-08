@@ -27,7 +27,7 @@ class DefaultController extends Controller
         		],
     			'verbs' => [
     				//'class' => VerbFilter::className(),
-                    'class' => \yii\filters\VerbFilter::class,
+                    'class' => VerbFilter::class,
     				'actions' => [
     					'delete' => ['POST'],
     				],
