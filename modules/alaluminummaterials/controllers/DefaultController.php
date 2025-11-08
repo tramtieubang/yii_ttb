@@ -38,6 +38,13 @@ class DefaultController extends Controller
      * Lists all AlAluminumMaterialsForm models.
      * @return mixed
      */
+
+    public function actionIndexTest()
+    {  
+        return "test git";
+    }
+
+
     public function actionIndex()
     {    
         $searchModel = new AlAluminumMaterialsSearch();
