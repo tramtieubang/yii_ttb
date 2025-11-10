@@ -133,6 +133,7 @@ $config = [
                 //'/' => '/home',
                 '/' => 'site/index', // site/index sẽ tự kiểm tra login hay chưa
                 '<controller>/<action>' => '<controller>/<action>',
+                'POST api/user/login' => 'api/user/login',
             ],
         ],
         
