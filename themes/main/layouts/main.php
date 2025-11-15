@@ -20,9 +20,13 @@ $csrfToken = Yii::$app->request->getCsrfToken();
 <html lang="vi" dir="ltr">
 <head>
     <link rel="shortcut icon" type="image/x-icon" href="<?= Yii::getAlias('@web') ?>/assets/images/brand/favicon.ico" >
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.min.js"></script>
+   <!--  <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.min.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.2/dropzone.min.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.2/dropzone.min.js"></script>
+ -->
+    <script src="<?= Yii::getAlias('@web') ?>/js/webcam.min.js"></script>
+    <script src="<?= Yii::getAlias('@web') ?>/css/dropzone.min.css"></script>
+    <script src="<?= Yii::getAlias('@web') ?>/js/dropzone.min.js"></script>
 
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>

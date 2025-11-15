@@ -90,6 +90,7 @@ $config = [
 		
 		// Thêm assetManager ở đây
         'assetManager' => [
+            //'baseUrl' => 'https://yii-ttb.local', // ép assets HTTPS
             'bundles' => [
                 'yii\bootstrap\BootstrapAsset' => [
                     'class' => \yii\bootstrap5\BootstrapAsset::class,
@@ -138,6 +139,16 @@ $config = [
         ],
         
     ],
+   'on beforeRequest' => function ($event) {
+        $request = Yii::$app->request;
+        if (!$request->getIsSecureConnection()) { // <-- sửa ở đây
+            $secureUrl = 'https://' . $request->hostInfo . $request->url;
+            Yii::$app->response->redirect($secureUrl, 301)->send();
+            Yii::$app->end();
+        }
+    },
+
+
     'params' => $params,
     //'defaultRoute' => 'home/default', // controller/home + action/default
 ];
